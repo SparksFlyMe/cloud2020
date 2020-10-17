@@ -22,7 +22,10 @@ public class OrderController {
     @Resource
     private RestTemplate restTemplate;
 
-//    public static final String PAYMENT_URL = "http://localhost:8001";
+    //    public static final String PAYMENT_URL = "http://localhost:8001";
+    /**
+     * Ribbon和Eureka整合后Consumer可以直接调用服务而不用再关心地址和端口号,且该服务还有负载功能了。CLOUD-PAYMENT-SERVICE：服务name
+     */
     public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     @GetMapping("/consumer/userList")
